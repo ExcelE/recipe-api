@@ -1,1 +1,3 @@
-docker-compose run app sh -c "python manage.py test && flake8"
+sudo docker-compose run app sh -c "python manage.py makemigrations core"
+sudo docker-compose run app sh -c "python manage.py migrate"
+sudo docker-compose run app sh -c "python manage.py test && flake8"
