@@ -11,7 +11,7 @@ RUN apk add --update --no-cache --virtual .tmp-build-dev \
 
 RUN pip install -r /requirements.txt
 # Removing Postgres dependencies, minimizing the container
-RUN apd del .tmp-build-dev
+RUN apk del .tmp-build-dev
 
 RUN mkdir /app
 WORKDIR /app
